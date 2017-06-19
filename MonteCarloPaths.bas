@@ -9,6 +9,7 @@ Public vol As Double
 Public steps As Integer
 Public sims As Integer
 Public T As Double
+
 Sub MonteCarloInputs()
 
 Sheet = InputBox("Which sheet will you use for the simulations?", "Monte Carlo Inputs")
@@ -23,7 +24,9 @@ T = InputBox("What is the time period? (proportional to years)", "Monte Carlo In
 Call MonteCarloSim(Sheet, s0, a, div, vol, steps, sims, T)
 
 End Sub
+
 Sub MonteCarloSim(Sheet As String, s0 As Double, a As Double, div As Double, vol As Double, steps As Integer, sims As Integer, T As Double)
+
 Attribute MonteCarloSim.VB_Description = "testing monte carlo sim\n"
 Attribute MonteCarloSim.VB_ProcData.VB_Invoke_Func = "d\n14"
 
